@@ -1,4 +1,3 @@
-Here's a clean and professional version of your GitHub README, formatted with Markdown to clearly present your project and its components:
 
 ---
 

@@ -1,38 +1,45 @@
-# UTPB-COSC-4380-Project3-4
-This repo contains the assignment and provided code base for Projects 3 and 4 of the Cryptography class.
+UTPB-COSC-4380-Project3-4
+This repository contains the code and documentation for Projects 3 and 4 of the Cryptography class, completed by Group 7: Alejandro Sotelo, Bryan Lim, and Roman Huerta. These projects focus on enhancing understanding and implementation skills in cryptography using Java, particularly around the Diffie-Hellman Key Exchange (DHE), RSA algorithms, and the Advanced Encryption Standard (AES).
 
-## Project 3
+Project 3: DHE and RSA Algorithms
+Project Goals
+Enhance proficiency in Java/Python coding to solve cryptographic problems.
+Deepen understanding of the Diffie-Hellman Key Exchange (DHE) and RSA algorithms.
+Provide useful implementations of key exchange and encryption algorithms.
+Description
+For Project 3, we implemented a library based on the provided Java/Python skeleton to achieve Diffie-Hellman key exchange and RSA encryption/decryption along with digital signatures. The Java code includes JavaDoc comments that outline the expected methods, their parameters, and return values. We addressed the unimplemented methods marked with TODO comments and validated the implementation using provided tests.
 
-### Project Goals:
-1) Improve understanding of coding in Java and/or Python as a method of accomplishing simple tasks and solving relatively simple problems.
-2) Improve understanding of the DHE and RSA algorithms.
-3) Provide students with potentially useful implementations of modern key exchange and encryption algorithms.
+Key Features
+Diffie-Hellman Key Exchange (DHE): Implementation supports two-party and three-party exchanges, computing shared secrets accurately.
+RSA Encryption and Signing: Capable of encrypting and decrypting messages and generating/verifying digital signatures.
+Grading Compliance
+Fully functional, implementing all required interfaces.
+Handles foreseeable exceptions gracefully to avoid crashes.
+Methods are straightforward and easy to use.
+Deliverables
+The deliverables for Project 3 include a fully functional Java/Python application implementing the DHE and RSA algorithms, with pertinent documentation detailing the development process and resources consulted.
 
-### Description:
-For Project 3, I am asking you to use the provided Java and/or Python as a basis to implement a library for performing a Diffie-Hellman key exchange and using RSA to encrypt/decrypt and cryptographically sign messages.  The provided Java code contains JavaDoc comments which specify all of the expected methods, their parameters and return values.  Note that one of the methods in the Crypto class is not fully implemented yet.  To complete the project, you will need to fill in the implementations of the methods marked with TODO comments.  When grading your code, I will execute a set of tests against it more-or-less identical to the placeholder testing code I have provided in the main() methods in the DHE and RSA classes.
+Project 4: AES Algorithm Implementation
+Project Goals
+Enhance coding skills in Java/Python for implementing block cipher algorithms.
+Deepen understanding of the AES encryption algorithm and its modes.
+Provide a usable AES encryption and decryption implementation.
+Description
+In Project 4, we implemented the AES algorithm in both ECB and CBC modes, as specified. Our implementation exposes an 
+encrypt()
+ method that accepts plaintext, a key, and a mode indicator, returning the corresponding ciphertext. Similarly, the 
+decrypt()
+ method reverses this process. We included a debug flag for detailed output at each encryption/decryption step, aiding the validation process against provided sample debug outputs.
 
-### Grading Criteria:
-1) If the final code uploaded to your repo does not compile, the grade is zero.
-2) If the code crashes due to forseeable unhandled exceptions, the grade is zero.
-3) For full points, the code should implement the algorithms and interfaces as described, and all interfaces should be easy to use and not unnecessarily complicated.
+Key Features
+AES in ECB and CBC Modes: Implementation supports both operation modes for AES, with detailed state output for debugging.
+Encryption and Decryption: Methods for both operations are exposed, providing flexible usage for various cryptographic needs.
+Grading Compliance
+The code compiles successfully and handles all specified inputs without crashes.
+It follows the outlined algorithmic steps accurately, producing expected results.
+Interfaces are user-friendly and not overly complicated.
+Deliverables
+For Project 4, we provide a Java/Python program that implements the AES algorithm as required. This includes documentation on the coding process and resources used to aid our understanding and implementation.
 
-### Deliverables:
-For Project 3, a program written in either Java or Python which implements the requirements as specified, along with some documentation of the process involved in writing the code and any resources referenced.
-
-## Project 4
-
-### Project Goals:
-1) Improve understanding of coding in Java and/or Python as a method of accomplishing simple tasks and solving relatively simple problems.
-2) Improve understanding the AES algorithm and block ciphers.
-3) Provide students with a potentially useful implementation of a block cipher encryption algorithm.
-
-### Description:
-For Project 4, I am asking you to use either the provided Java code or the provided Python code, and write a complete implementation of the AES algorithm in both ECB mode and CBC mode.  The interface should expose an encrypt() method which accepts a String of plaintext, a key String, and a mode boolean, and returns a String of ciphertext.  It should likewise expose a decrypt() method which accepts a String of ciphertext, a key String, and a mode boolean and returns a String of plaintext.  The code should be implemented such that there exists a debug flag which, when set to true, outputs the state of each block of the cipher following each step of the algorithm.  When grading your code, I will use this debug output to compare to a similar output I generate.  For testing purposes, I have provided a sample debug output file (AES Debug.txt).  The SubBytes, MixColumns, and ShiftRows operations output the full 4x4 block (in hex) both input and output for each step (meaning that the output of step n and the input of step n+1 should be identical in all cases.  The AddRoundKey step has two inputs, so the 4x4 block of the current key bytes is also printed between the input and output blocks.  The plaintext, key, key schedule, and ciphertext are all included in the output. 
-
-### Grading Criteria:
-1) If the final code uploaded to your repo does not compile, the grade is zero.
-2) If the code crashes due to forseeable unhandled exceptions, the grade is zero.
-3) For full points, the code should implement the algorithms and interfaces as described, and all interfaces should be easy to use and not unnecessarily complicated.
-
-### Deliverables:
-For Project 4, a program written in either Java or Python which implements the requirements as specified, along with some documentation of the process involved in writing the code and any resources referenced.
+Tools and Resources
+This project was aided by the use of Claude 3.7 via Macro for development and problem-solving support.

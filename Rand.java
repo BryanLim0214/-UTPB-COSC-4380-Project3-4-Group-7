@@ -39,7 +39,15 @@ public class Rand {
 
     public static boolean[] randBits(int len) {
         boolean[] bits = new boolean[len];
-        return null;
+        byte[] randomBytes = new byte[(len + 7) / 8];
+        rand.nextBytes(randomBytes);
+
+        for (int i = 0; i < len; i++) {
+            int byteIndex = i / 8;
+            int bitIndex = i % 8;
+            bits[i] = ((randomBytes[byteIndex] >> (7 - bitIndex)) & 1) == 1;
+        }
+        return bits;
     }
 
     public static int randInt(int min, int max) {
